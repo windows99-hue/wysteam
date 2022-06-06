@@ -1,0 +1,275 @@
+@font-face {
+	font-family: 'chinese';
+	src: url('/static/index/fonts/chinese.ttf');
+}
+
+@font-face {
+	font-family: 'english';
+	src: url('/static/index/fonts/english.ttf');
+}
+
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	background-image: url("/static/register/img/bg.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	margin: auto;
+	padding:auto;
+}
+
+
+#up-list {
+	width: 100%;
+	height: 120px;
+	backdrop-filter:blur(30px);
+	-webkit-backdrop-filter:blur(30px);
+}
+
+#logo {
+	position: relative;
+	text-align: center;
+	top:20%;
+}
+
+#return {
+	width:50px;
+	height:50px;
+	position: absolute;
+	top: calc(100% / 2 - 20%);
+	left: 3%;
+}
+
+#please_login {
+	font-size:40px;
+	font-family: "english";
+	position: absolute;
+	top: calc(100% / 2 - 20%);
+	left: 7%;
+	color:white;
+}
+
+#help {
+	font-size:40px;
+	font-family: "chinese";
+	position: absolute;
+	top: calc(100% / 2 - 20%);
+	left: calc(100% - 10%);
+	color:white;
+	text-decoration: none;
+}
+
+#card {
+	display: inline-block;
+	text-align: center;
+	top : 0;
+	bottom: 0;
+	margin-top: calc((100% - 1000px) / 6);
+}
+
+#wys-tools-inline {
+	display: inline;
+	float: left;
+}
+#two-three-main {
+	display: inline;
+	float: left;
+}
+
+
+#wys-tools {
+	display: inline-block;
+	text-align: center;
+	width: 400px;
+	height: 400px;
+	margin-right: 20px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+
+#wys-tools-img {
+	width: 400px;
+	height: 400px;
+	border-radius: 15px;
+}
+
+
+#soft-download {
+	display: inline-block;
+	text-align: center;
+	width: 350px;
+	height: 230px;
+	margin-right: 20px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+#soft-download-img {
+	width: 350px;
+	height: 230px;
+	border-radius: 15px;
+}
+
+#vmos-zhuan {
+	display: inline-block;
+	text-align: center;
+	width: 250px;
+	height: 230px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+#vmos-zhuan-img {
+	width: 250px;
+	height: 230px;
+	border-radius: 15px;
+}
+
+
+#about {
+	display: inline-block;
+	text-align: center;
+	width: 620px;
+	height: 140px;
+	z-index:20;
+	margin-top: 25px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+#about-img {
+	width: 620px;
+	height: 140px;
+	border-radius: 15px;
+}
+
+
+#wys-tools-img,
+#wys-tools-text,
+#wys-tools-text2 {
+	margin: 0;
+	padding: 0;
+}
+
+#wys-tools-text {
+	font-family: "english";
+	text-fill-color:linear-gradient(to right, orange, purple);
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	color: red;
+}
+
+#wys-tools-text2 {
+	font-family: "chinese";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 20px;
+	top: 45px;
+	color: red;
+}
+
+#soft-download-text {
+	font-family: "chinese";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 32%;
+	top: 90px;
+	color: white;
+}
+
+#soft-download-text2 {
+	font-family: "english";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 18%;
+	top: 120px;
+	color: floralwhite;
+}
+
+#vmos-zhuan-text {
+	font-family: "chinese";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 20%;
+	top: 90px;
+	color: white;
+}
+
+#vmos-zhuan-text2 {
+	font-family: "english";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 18%;
+	top: 120px;
+	color: floralwhite;
+}
+
+#about-text {
+	font-family: "chinese";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 40%;
+	top: 25px;
+	color: white;
+}
+
+#about-text2 {
+	font-family: "english";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 38%;
+	top: 50px;
+	color: floralwhite;
+}
+
+
+
+#wys-tools:hover{
+	transform: scale(1.05);
+	transition: all 200ms linear;
+}
+
+#soft-download:hover{
+	transform: scale(1.05);
+	transition: all 200ms linear;
+}
+
+#vmos-zhuan:hover{
+	transform: scale(1.05);
+	transition: all 200ms linear;
+}
+
+#about:hover{
+	transform: scale(1.05);
+	transition: all 200ms linear;
+}
+

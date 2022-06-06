@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link href="{% static 'register/css/index.css' %}" type="text/css" rel="stylesheet" />
+		<link rel="shortcut icon" href="{% static 'register/img/ico.png' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	</head>
+	<body>
+		<div id="main">
+			<div id="mohu"></div>
+			<div class="content">
+				<div id="up-list">
+					<div id="logo_regi">
+						<navigator style="display:flex;flex-direction:column;justify-content: center" url="../">
+							<img src="{% static 'register/img/logo.png' %}" id="logo" />
+						</navigator>
+						<span id="register_text">R e g i s t e r</span>
+					</div>
+					<a id="please_login" href="/"><返回</a>
+				</div>
+				<div id="form_div">
+					<p style="color:red;font-size:20px">{{ error_name }}</p>
+					<form action="/register/" method="post">
+						{% csrf_token %}
+						<table>
+							<tr>
+								<td><input value="{{ captcha.hashkey }}" name="hashkey" type="hidden" id="id_captcha_0"><input type="text" name="username" placeholder="用户名"></td>
+							</tr>
+							<tr>
+								<td><input type="password" name="password" placeholder="密码"></td>
+							</tr>
+							<tr>
+								<td><input type="password" name="password_again" placeholder="再次输入密码"></td>
+							</tr>
+							<tr>
+								<td><img src="{% url 'index:captcha_img' %}"></td>
+							</tr>
+							<tr>
+								<td><input type="text" name="captcha" placeholder="验证码"></td>
+							</tr>
+							<tr>
+								<td><input type="submit" name="submit" placeholder="注册" id="sub"><button
+										id="help">帮助</button></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+	</script>
+	
+</html>

@@ -1,0 +1,211 @@
+@font-face {
+	font-family: 'chinese';
+	src: url('/static/index/fonts/chinese.ttf');
+}
+
+@font-face {
+	font-family: 'english';
+	src: url('/static/index/fonts/english.ttf');
+}
+
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+#main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	height: 900px;
+	background-image: url("/static/index/img/bg.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	margin: auto;
+	padding:auto;
+}
+
+
+#up-list {
+	margin-top: 40px;
+	width: 100%;
+	height: 100px;
+}
+
+#up-list-text {
+	text-align: center;
+	font-size: 30px;
+	color:white;
+}
+
+
+
+
+
+
+
+#card {
+	display: inline-block;
+	text-align: center;
+	top : 0;
+	bottom: 0;
+	margin-top: calc((100% - 1000px) / 6);
+}
+
+#wys-tools-inline {
+	display: inline;
+}
+#two-three-main {
+	display: inline-block;
+}
+
+
+#wys-tools {
+	display: inline-block;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	margin-top: 20px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+
+#wys-tools-img {
+	width: 300px;
+	height: 300px;
+	border-radius: 15px;
+}
+
+
+#soft-download {
+	display: inline-block;
+	text-align: center;
+	width: 300px;
+	height: 160px;
+	margin-top: 70px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+#soft-download-img {
+	width: 300px;
+	height: 160px;
+	border-radius: 15px;
+}
+
+#vmos-zhuan {
+	display: inline-block;
+	text-align: center;
+	width: 300px;
+	height: 160px;
+	margin-top: 20px;
+	position: relative;
+	left: auto;
+	top: auto;
+	transition: all 200ms linear;
+}
+
+#vmos-zhuan-img {
+	width: 300px;
+	height: 160px;
+	border-radius: 15px;
+}
+
+
+
+
+
+
+#wys-tools-text {
+	font-family: "english";
+	text-fill-color:linear-gradient(to right, orange, purple);
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	color: red;
+}
+
+#wys-tools-text2 {
+	font-family: "chinese";
+	font-size: 20px;
+	font-weight: bolder;
+	position: absolute;
+	left: 20px;
+	top: 45px;
+	color: red;
+}
+
+#soft-download-text {
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 30%;
+	top: 25px;
+	color: black;
+}
+
+#soft-download-text2 {
+	font-family: "english";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 12%;
+	top: 70px;
+	color: floralwhite;
+}
+
+#vmos-zhuan-text {
+	font-family: "chinese";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 25%;
+	top: 30px;
+	color: white;
+}
+
+#vmos-zhuan-text2 {
+	font-family: "english";
+	font-size: 25px;
+	font-weight: bolder;
+	position: absolute;
+	left: 22%;
+	top: 80px;
+	color: floralwhite;
+}
+
+
+
+
+
+#more {
+	width:100%;
+	height:30px;
+}
+
+#home {
+	display: inline-block;
+	width:30px;
+	height:30px;
+	text-align: center;
+	margin-top: 30px;
+	margin-right: 100px;
+}
+
+#menu {
+	display: inline-block;
+	width:30px;
+	height:30px;
+	margin-top: 30px;
+	text-align: center;
+}
