@@ -1,0 +1,179 @@
+@font-face {
+	font-family: 'chinese';
+	src: url('/static/register/fonts/chinese.ttf');
+}
+
+@font-face {
+	font-family: 'english';
+	src: url('/static/register/fonts/english.ttf');
+}
+
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+/* #main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	background-image: url("/static/register/img/bg.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	margin: auto;
+	padding: auto;
+} */
+
+#mohu {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: auto;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(15px);
+	background: url("/static/register/img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 5;
+	left: 0px;
+	top: 0px;
+	min-height: 100%;
+	margin: auto;
+	padding: auto;
+}
+
+#up-list {
+	width: 100%;
+	height: 120px;
+	backdrop-filter:blur(0px);
+}
+
+#login_text{
+	color:white;
+	font-family: 'english';
+	font-size:20px;
+	margin-left:120px;
+	text-align: center;
+}
+
+#aligns {
+	text-align: center;
+}
+
+#logo_regi{
+	position:relative;
+	transform: translate3d(-65px, -1px, 0);
+	box-sizing: border-box;
+}
+
+#logo {
+	width:135px;
+	height:60px;
+	position: relative;
+	text-align: center;
+	left:49.5%;
+	top:22%;
+}
+
+
+
+#please_login {
+	font-size:40px;
+	font-family: "chinese";
+	position: absolute;
+	top: calc(100% / 2 - 20%);
+	left: 7%;
+	color:white;
+	text-decoration:none;
+}
+
+input {
+	width: 300px;
+	height: 60px;
+	margin: 5px;
+	border-radius: 10px;
+	border: none;
+	background-color:rgba(255,255,255,0.3);
+}
+
+#yanzheng {
+	width:200px;
+}
+
+#sub{
+	width:200px;
+	margin-right:11px;
+	margin-left:4px;
+	font-size: 20px;
+	font-family: "chinese";
+	font-weight: bold;
+}
+
+#register {
+	width: 100px;
+	height: 60px;
+	margin-left:-5px;
+	border-radius: 5px;
+	border: none;
+	background-color:rgba(255,255,255,0.3);
+	font-size:20px;
+	font-family: "chinese";
+	font-weight: bold;
+}
+
+/* input的占位符样式 */
+::-webkit-input-placeholder {
+	/* WebKit browsers */
+	font-size: 20px;
+	font-family: 'chinese';
+	font-weight: bold;
+	color: black;
+}
+
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	font-size: 20px;
+	font-family: 'chinese';
+	font-weight: bold;
+	color: black;
+}
+
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	font-size: 20px;
+	font-family: 'chinese';
+	font-weight: bold;
+	color: black;
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	font-size: 20px;
+	font-family: 'chinese';
+	font-weight: bold;
+	color: black;
+}
+
+
+#form_div {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+}

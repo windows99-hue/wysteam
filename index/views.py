@@ -44,7 +44,40 @@ def index(request):
         return render(request,'index/index-m.html')
     
 def login(request):
-    return HttpResponse("login view")
+    # 判断手机还是电脑
+    #这步是为了返回浏览器打开网页时候的headers，因为user-agent是存在于headers中的
+    total = request.headers
+    #ua就是通过字典取值的方式拿到返回的user-agent,最后传递到pc_or_mobile.py中的ua
+    ua = total["User-Agent"]
+    #调用pc_or_mobile.py文件里面的函数judge_pc_or_mobile开始判断
+    #将ua的值传到该函数的参数预留项里
+    mobile = judge_pc_or_mobile(ua)
+    #输出一下查看状态
+    print("判断访问是不是手机：  ", mobile)
+    #######################
+    #开始判断，如果不是手机访问，返回content_w.html，即电脑页面
+    if mobile == False:
+        status = request.session.get('is_login')
+        if status:
+            return redirect(reverse('index:user_view'))
+        if request.method == "POST":
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+            print(request.session.get('is_login'))
+            obj_user = models.Users.objects.filter(name=username, password=password)
+            if obj_user:
+                print(obj_user)
+                request.session["is_login"] = True
+                request.session["user"] = username
+                return redirect(reverse('index:user_view'))
+            error = '用户名或密码错误'
+            return render(request, 'login/index.html', {"error_msg":error})
+        return render(request,'login/index.html')
+    #否则，就要返回content.html即手机界面
+    else:
+        #return HttpResponse("phone")
+        return render(request,'login/index-m.html')
     
 def register(request):
     # 判断手机还是电脑
@@ -98,4 +131,16 @@ def register(request):
     else:
         #return HttpResponse("phone")
         return render(request,'register/index-m.html')
+    
+def logout(request):
+    request.session.flush() # 删除一条记录包括(session_key session_data expire_date)三个字段
+    return redirect(reverse("index:login"))
 
+def user_view(request):
+    status = request.session.get('is_login')
+    if status:
+        username = request.session.get('user')
+        return render(request, 'user_view/index.html', {"username":username})
+    else:
+        return HttpResponse('''"<script>alert('会话已过期，请重新登录!');window.location.href="/login/";</script>"''')
+        #return redirect('index')
