@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		欢迎您:{{username}}
+		<a href="{% url 'index:logout' %}">退出登录</a>
+	</body>
+</html>
