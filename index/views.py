@@ -64,6 +64,12 @@ def login(request):
             username = request.POST.get('username')
             password = request.POST.get('password')
             password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+            check_code = request.POST.get('captcha')
+            if check_code and check_code.lower() == request.session.get('check_code').lower():
+                pass
+            else:
+                error_name = '验证码不正确！'
+                return render(request,'login/index.html',{'error_msg':error_name})
             print(request.session.get('is_login'))
             obj_user = models.Users.objects.filter(name=username, password=password)
             if obj_user:
