@@ -14,7 +14,7 @@
 			<div id="up-list">
 				<img src="{% static 'index/img/logo.png' %}" id="logo" />
 				<img src="{% static 'index/img/return.png' %}" id="return" />
-				<span id="please_login">Please Login</span>
+				<a href="{% url 'index:login' %}" id="please_login" style="text-decoration: none;">Please Login</a>
 				<a id="help" href="#">帮助(H)</a>
 			</div>
 			<div id="card">
