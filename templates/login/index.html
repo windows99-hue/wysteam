@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>注册</title>
+		<title>登录</title>
 		<link href="{% static 'login/css/index.css' %}" type="text/css" rel="stylesheet" />
 		<link rel="shortcut icon" href="{% static 'login/img/ico.png' %}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
@@ -39,8 +39,7 @@
 								<td><input type="text" name="captcha" placeholder="验证码"></td>
 							</tr>
 							<tr>
-								<td><input type="submit" name="submit" value="登录" id="sub"><button
-										id="register">注册</button></td>
+								<td><input type="submit" name="submit" value="登录" id="sub"><button id="register" onclick="window.location.href = '{% url 'index:register' %}'" type="button">注册</button></td>
 							</tr>
 						</table>
 					</form>
